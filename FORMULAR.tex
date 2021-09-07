@@ -1,0 +1,61 @@
+\documentclass[twoside,10pt]{article}
+\usepackage{amsmath,amsfonts,amsthm,fullpage}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+\usepackage{amsthm}
+\usepackage[most]{tcolorbox}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\definecolor{browna}{rgb}{0.76,0.72,0.65}
+\definecolor{brownb}{rgb}{0.71,0.69,0.65}
+\newtcbtheorem[no counter]{solution}{Solution}{
+  enhanced,
+  sharp corners,
+  attach boxed title to top left={
+    yshifttext=-1mm
+  },
+  colback=white,
+  colframe=browna,
+  fonttitle=\bfseries,
+  boxed title style={
+    sharp corners,
+    size=small,
+    colback=browna,
+    colframe=browna,
+  } 
+}{thm}
+
+
+
+\begin{document}
+
+\title Latex formula
+
+\maketitle
+
+\begin{itemize}
+Some useful latex formula for work, study, paper etc.
+\end{itemize}
+
+%----------------------------------------------------------------------------------
+
+
+
+%----------------------------------------------------------------------------------
+Use eqnarray to Align left
+
+\begin{eqnarray}   \label{eq}`  
+J_k &=& \sum_{n=1}^N r^{nk} ... \nonumber    \\
+&=& \sum_{n=1, r^{nk} =1}^N ....   \nonumber    \\
+& =& \sum_{n=1, r^{nk} =1}^N .... \nonumber    \\
+&=& \sum_{n=1, r^{nk} =1}^N  ...
+\end{eqnarray}
+
+use frac to show Derivation
+$$\frac{\partial J}{\partial u^k} = \sum_{n=1}^{N} r^{nk}(-2 x^n + 2\mu^k) = -2 \sum_{n=1}^{N} r^{nk} x^n + 2 \sum_{n=1}^{N} r^{nk} u^k = 0$$
+$$\Rightarrow \mu^k = \frac{\sum_{n=1}^N r^{nk} x^n}{\sum_{n=1}^N r^{nk}} $$
+
+
+\end{document}
